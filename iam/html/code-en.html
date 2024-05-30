@@ -1,0 +1,328 @@
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>National Single Sign-On</title>
+    <meta name="description" content="National Single Sign-On">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/iam/css/iam.css">
+</head>
+
+<body>
+
+    <div class="o-page">
+        <div class="container-fluid u-p-zero">
+            <header class="c-navbar u-mb-large">
+                <a class="c-navbar__brand u-mr-medium" href="/idpinit/splist.jsp">
+                    <img src="/iam/img/logo (1).png" width="128">
+                </a>
+                <img src="/iam/img/vision2030-grey.svg" width="128"
+                    class="u-opacity-heavy u-mr-auto u-hidden-down@mobile">
+                <nav class="c-navbar__nav collapse u-border-bottom" id="main-nav">
+                    <ul class="c-navbar__nav-list">
+                        <!--li class="c-navbar__nav-item">
+                <a class="c-navbar__nav-link" href="/index.html"><i class="feather icon-home"></i>
+                  Home</a>
+              </li>
+              <li class="c-navbar__nav-item">
+                <a class="c-navbar__nav-link c-tooltip c-tooltip--bottom" aria-label="Create New Account through MOI Absher" href="https://www.moi.gov.sa/wps/portal/static/register/"><i class="feather icon-user"></i> New Account</a>
+              </li-->
+                        <!--li class="c-navbar__nav-item">
+                <a class="c-navbar__nav-link " href="/idpinit/login"><i class="feather icon-log-in"></i> Log in</a>
+              </li-->
+                        <li class="c-navbar__nav-item">
+                            <a class="c-navbar__nav-link " href="/iam/html/code-ar.html"><i
+                                    class="feather icon-globe"></i> عربي</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <!-- Start of Dropdown Menus -->
+                <!--div id="favouritesNavMain" class="c-dropdown dropdown u-mr-small hide">
+          <a class="c-notification dropdown-toggle c-btn c-btn--outline c-btn--small c-btn--secondary" id="ddFavorites" data-toggle="dropdown" role="button">
+            <i class="c-notification__icon feather icon-star"></i>
+          </a>
+          <div class="c-dropdown__menu c-dropdown__menu--large dropdown-menu"  data-boundary="ddFavorites">
+            <span class="c-dropdown__menu-header">
+             Favorites
+            </span>
+  
+            <span id="recent_services" class="c-dropdown__menu-header">
+                Recently Used Services
+            </span-->
+                <!-- Recent activity will be updated here -->
+                <!--a class="c-dropdown__menu-footer">
+            </a>
+          </div>
+      </div-->
+                <!--div id="alertsNavMain" class="c-dropdown dropdown u-mr-small hide">
+          <div class="c-notification has-indicator dropdown-toggle c-btn c-btn--outline c-btn--small c-btn--secondary" id="ddNotifications" data-toggle="dropdown" role="button">
+            <i class="c-notification__icon feather icon-bell"></i>
+          </div>
+          <div class="c-dropdown__menu c-dropdown__menu--large dropdown-menu"  data-boundary="ddNotifications">
+            <span class="c-dropdown__menu-header">
+              Alerts
+            </span>
+            <a class="c-dropdown__menu-footer">
+              All Alerts
+            </a>
+          </div>
+      </div-->
+                <div id="currentUserNavMain" class="c-dropdown dropdown u-mr-small hide">
+                    <div class="dropdown-toggle c-notification c-btn c-btn--outline c-btn--small c-btn--secondary"
+                        id="dropdownMenuAvatar" data-toggle="dropdown" role="button">
+                        <i class="c-notification__icon feather icon-user"> <span id="currentAuthUser"></span></i>
+                    </div>
+                    <div class="c-dropdown__menu dropdown-menu has-arrow dropdown-menu-right">
+                        <!--a class="c-dropdown__item dropdown-item c-avatar c-avatar--small dropdown-toggle" href="#">
+              <div class="o-media">
+                <!--div class="o-media__img u-ml-small">
+                  <img class="c-avatar__img" src="/img/placeholder-user.png" alt="profile pic">
+                </div-->
+                        <!--div class="o-media__content">
+                  <span id="currentAuthUser"></span>
+                </div>
+              </div>
+            </a-->
+                        <a class="c-dropdown__item dropdown-item" href="/idpinit/userprofile.jsp">My Information</a>
+                        <a class="c-dropdown__item dropdown-item" href="/idpinit/logout">Sign Out</a>
+                    </div>
+                </div>
+
+
+                <!-- End of Dropdown Menus -->
+
+                <!-- // Navigation items  -->
+                <button class="c-navbar__nav-toggle collapsed" type="button" data-toggle="collapse"
+                    data-target="#main-nav" aria-expanded="false">
+                    <i class="feather icon-menu"></i>
+                </button>
+            </header>
+        </div>
+
+        <div class="container">
+
+            <div id="bnfInfo" class="row u-justify-center">
+                <h2 id="bnfLabel" class="u-color-primary u-mb-small u-text-center">Dear Takatof user, welcome to National Single Sign-On
+                </h2>
+            </div>
+
+            <div class="conts_forms">
+                <div id="auth_sequence" style="display:none;">
+                    <div class="row u-justify-center">
+                        <div class="col-md-8">
+                            <div class="u-text-center">
+                                <ol class="steps u-mb-medium">
+                                    <li id="USER_VALIDATION_NATID_STEP_NO_CAPTCHA" data-step="1" class1="is-active"
+                                        class="is-complete">ID Number</li>
+                                    <li id="INTIDP_HAWYATI_AUTH_PAM" data-step="2" class1="is-active" class="is-active">
+                                        Nafath App</li>
+                                    <li id="POLICY_ENFORCEMENT_STEP" data-step="3" class1="is-active">Policy Enforcement
+                                        Step</li>
+                                    <li id="USER_CONSENT_STEP" data-step="4" class1="is-active">User Consent</li>
+                                    <li id="AUTH_SUCCESS" data-step="4" class1="is-active" class="hidden"></li>
+                                    <li id="benefeciary" data-step="5" class1="is-active" class="breadcrumb1__last">
+                                        Identity Authentication Management</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row u-justify-center">
+                    <div class="col-md-8">
+                        <div id="errors" class="c-alert c-alert--danger alert u-mb-medium hide" style="display: none;">
+                            <span class="c-alert__icon">
+                                <i class="feather icon-slash"></i>
+                            </span>
+                            <div class="c-alert__content">
+                                <h4 id="errorMessage" class="c-alert__title u-color-danger"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="content">
+                <form novalidate="novalidate"> <input name="selectedSecuence" id="selectedSecuence" type="hidden"
+                        value="1"> <input name="startover" id="startover" type="hidden"> </form>
+             
+                    <div class="content active" id="pl1" style="max-height: 1200px; width: 100%;">
+                        <div class="row u-justify-center">
+                            <div class="col-md-6">
+                                <div class="c-card">
+                                    <div class="row">
+                                        <form id="nRandNumForm"></form>
+                                        <div class="col-md-10 u-text-center u-p-small u-mh-small u-color-secondary">
+                                            <button class="c-btn c-btn--outline" fdprocessedid="o3ivrg">70</button>
+                                            <p class="codepra">Please Open Nafath Mobile App and approve the request by
+                                                selecting above number</p>
+                                        </div>
+
+                                        <div class="col-md-10 u-text-center u-mt-medium"> <a
+                                            onclick="window.location.href='/iam/html/iam-E.html';return false;"
+                                            class="c-btn c-btn--secondary c-btn--outline c-btn--small" id="editing"> <i class="feather icon-repeat"></i>
+                                            Cancel </a> </div>
+                                      </div>
+                    
+                                        <div class="col-md-10 u-text-center u-mt-medium"> <a
+                                            onclick="window.location.href='/html/home.html';return false;"
+                                            class="c-btn  c-btn--outline c-btn--small butme" id="editing"> <i class="feather icon-log-in"></i>
+                                            Confirm </a> </div>
+                                      </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <script> function chunkHandler(chunkStr) { if (chunkStr === "error") { if (fetchRtTm > 0 && fetchRtTm < FETCH_INTERVAL_TH) { dofetch('userauthservice', 'Action=p', chunkHandler); } } else if (chunkStr === "complete") { console.log("complete"); } else if (RESP_TYPE === "JSON") { terminateFetch(); var authRetObj = parseJson(chunkStr); console.log("authRetObj", authRetObj); if (authRetObj && authRetObj['auth'] == "true") { authenticate(document.getElementById("nRandNumForm")); return true; } else if (authRetObj && authRetObj['auth'] == "false") { buildAnddisplayError("-2002"); } else if (authRetObj && authRetObj['tpl'] === "authenticated") { var authRedirectUri; try { if (authRetObj['data']) { if ((typeof authRetObj['data']) === 'string') { var authRetDataObj = parseJson(authRetObj['data']); authRedirectUri = authRetDataObj['redirect']; } else { authRedirectUri = authRetObj['data']['redirect']; } } } catch (e) { console.error('redirect error', e); } if (!authRedirectUri) { authRedirectUri = "/authservice/authenticate"; } location.replace(authRedirectUri); } else if (authRetObj && authRetObj['code']) { buildAnddisplayError(authRetObj['code']); } } else { console.warn("invalid response:" + chunkStr); } return false; } function postErrorHandler() { } function onTemplateLoad() { initFetchTimeout(); dofetch('userauthservice', 'Action=p', chunkHandler); } function buildAnddisplayError(errorCode) { $("#errorMessage").html(getErrorMessage(errorCode)); $("#errors").show(); $("#errors").removeClass("hide"); $("#spinner").hide(); } </script>
+                </div>
+          
+                <div class="content" id="pl2">
+                    <form style="padding: 25px;text-align: center;" novalidate="novalidate">
+                        <h3 id="placeholder1">Please wait ...</h3>
+                    </form>
+                </div>
+            </div>
+            <div class="clr"> </div>
+            <script> let flag = false; function handleClick(value, placeholder, atr) { let e = window.event; e.preventDefault(); if (atr === 'collapsible active') { flag = true; } else { startOverAuth(value, placeholder); flag = false; } } let seloption = option || 1; window.addEventListener('load', function () { slelectAuth(seloption, "pl" + seloption); }); var coll = document.getElementsByClassName("collapsible"); var i; coll[seloption - 1].classList.toggle("active"); var content = coll[seloption - 1].nextElementSibling; content.style.maxHeight = "1200px"; content.style.width = "100%"; content.classList.toggle("active"); for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function () { if (flag) { return false; } document.querySelectorAll(".collapsible").forEach(function (el, index) { if (el.classList.value === 'collapsible active') { el.classList.toggle("active"); el.nextElementSibling.style.maxHeight = null; el.nextElementSibling.innerHTML = ''; el.nextElementSibling.classList.toggle("active"); } }); this.classList.toggle("active"); var content = this.nextElementSibling; content.classList.toggle("active"); content.style.maxHeight = "1200px"; content.style.width = "100%"; }); } </script>
+        </div>
+
+    </div><!-- // .container -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <footer class="c-footer u-mt-xsmall u-justify-between">
+                    <div class="o-media">
+                        <div class="o-media__img u-ml-small">
+                            <div class="c-avatar">
+                                <img class="c-avatar__img" src="/iam/img/NIC-logo.png" alt="NIC-logo">
+                            </div>
+                        </div>
+
+                        <div class="o-media__content u-ml-small">
+                            <p>Development and operation</p>
+                            <h5 class="u-color-secondary">National Information Center</h5>
+                            <p>National Single Sign-On All rights reserved © 2023</p>
+                        </div>
+                    </div>
+                    <nav>
+                        <a class="c-footer__link" href="/idpinit/splist.jsp">Home</a>
+                        <a class="c-footer__link" href="/about.html">About</a>
+                        <a class="c-footer__link" href="/contact.html">Contact Us</a>
+                        <a class="c-footer__link" href="/terms.html">Terms &amp; Conditions</a>
+                        <a class="c-footer__link" href="/help.html">Assitance &amp; Support</a>
+                        <a class="c-footer__link" href="/privacy.html">Privacy</a>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </div>
+    </div><!-- // .o-page -->
+
+    <!-- Main JavaScript -->
+    <script type="text/javascript" src="/js/script.min.js"></script>
+    <!--script type="text/javascript" src="/js/script.min.js"></script-->
+    <script type="text/javascript" src="/js/mustache.js"></script>
+    <script type="text/javascript" src="/js/templates/desktop_en.js"></script>
+    <script type="text/javascript" src="/js/authMapping.js"></script>
+    <script type="text/javascript" src="/js/engine.js"></script>
+
+    <!--script type='text/javascript' src='/js/iam_events.js'></script-->
+
+    <script type="text/javascript" src="/js/auth.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/idauth_errors.js"></script>
+    <script type="text/javascript" src="/js/idauth.js"></script>
+    <!--script type="text/javascript" src="/js/idauth_custom.js"></script-->
+    <script type="text/javascript" src="/js/authMethods.js"></script>
+
+    <!-- jquery validation libs -->
+    <!--script type="text/javascript" src="/js/jquery.validate.js"></script-->
+
+    <!--script type="text/javascript" src="/js/idauth_check.js"></script> 
+      <script type="text/javascript" src="/js/bioauth.js"></script>
+      <script type="text/javascript" src="/js/ie-extension.js"></script-->
+
+    <!--script type="text/javascript" src="/js/jquery.slicknav.js"></script-->
+    <!--script type="text/javascript" src="/js/slick.js"></script-->
+    <!--script type="text/javascript" src="/js/tabs.js"></script-->
+    <!--script type="text/javascript" src="/js/jquery.atooltip.js"></script-->
+    <noscript>
+        <meta http-equiv="Refresh" content="0; URL=/jsdisabled.htm">
+    </noscript>
+
+    <!--script type="text/javascript" src="/js/recent_act.js"></script-->
+    <!--script src="/idpinit/recent_user_sps"></script-->
+    <script src="/idpinit/getuser.jsp"></script>
+    <!-- script>setCurrentAuthUser("currentAuthUser");</script-->
+    <script>
+        var serviceURL = "userauthservice";
+    </script>
+
+
+    <!-- spinner -->
+    <div id="spinner" class="overlayWrapper u-m-0"
+        style="position: fixed; width: 100%; height: 100%; inset: 0px; background-color: rgba(0, 0, 0, 0.5); z-index: 2; cursor: pointer; display: none;">
+        <div class="overlayBG"></div>
+        <div id="loading" class="overlayContainerOuter" style="text-align: center; padding-top: 20%;">
+            <div class="overlayContainerInner u-p-medium" style="
+      background-color: white;
+  ">
+                <div class="spinnerContent">
+
+
+                    <div class="modalDetails">
+                        <div class="loading_msg">
+                            <img alt="" src="/images/en/loader.gif"><br>
+                            Under processing, please wait ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- spinner -->
+    <div id="browserErrorsOverlay" class="overlayWrapper" style="display:none;">
+        <div class="overlayBG"></div>
+        <div class="overlayContainerOuter">
+            <div class="overlayContainerInner">
+                <div id="browserErrorsOverlayContent" class="overlayContent"
+                    style="width: 630px;text-align: center; !important;">
+                    <div>
+                        <a href="#" class="overlayClose overlayClose_iconed" onclick="javascript:closeOverlay();"></a>
+                    </div>
+                    <h2>
+                        <img src="/images/moi_logo.gif" width="500" style="border-style:none;">
+                    </h2>
+                    <hr>
+
+                    <div class="modalDetails">
+                        <p class="disclaimerright error_dir" dir="ltr">
+                            Sorry, the browser you are using is outdated or not supported. So you have
+                            to update your browser to latest version to use the available services.
+                        </p>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>var data = "{ \"label\" : \"Identity Authentication Management\", \"image\" : \"User_Authentication.png\", \"description\" : \"You have requested to login to Identity Authentication Management, please choose a method to login.\"}"; beneficiaryInfo(data);</script>
+    <script>var options = '{  "options" : [ {    "name" : "Nafath App",    "steps" : [ "USER_VALIDATION_NATID_STEP_NO_CAPTCHA", "INTIDP_HAWYATI_AUTH_PAM", "POLICY_ENFORCEMENT_STEP", "USER_CONSENT_STEP", "AUTH_SUCCESS" ],    "value" : 1,    "image" : "smartphone",    "external" : false,    "selected" : true  }, {    "name" : "Username and Password",    "steps" : [ "UP_NID_AUTHENTICATION", "USER_VALIDATION_STEP", "OTP_AUTHENTICATION", "POLICY_ENFORCEMENT_STEP", "USER_CONSENT_STEP", "AUTH_SUCCESS" ],    "value" : 2,    "image" : "unlock",    "external" : false,    "selected" : false  } ]}'; buildChooseSequenceForm(options);</script>
+    <span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span>
+</body>
+
+</html>

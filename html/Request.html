@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <title>TAKATOF</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" href="/Font/material-design-iconic-font/css/material-design-iconic-font.min.css">
+		
+		<!-- STYLE CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/Request.css">
+		<link rel="stylesheet" href="/css/NAV.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Quicksand:wght@300..700&family=Readex+Pro:wght@160..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+	
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var sendRequestButton = document.querySelector('.button-holder');
+        sendRequestButton.addEventListener('click', function () {
+          // Get input values
+          var patientName = document.querySelector('input[name="patientName"]').value.trim();
+          var doctorName = document.querySelector('input[name="doctorName"]').value.trim();
+          var patientID = document.querySelector('input[name="patientID"]').value.trim();
+          var nationality = document.querySelector('select[name="nationality"]').value.trim();
+          var hospitalName = document.querySelector('select[name="hospitalName"]').value.trim();
+          var fileType = document.querySelector('select[name="fileType"]').value.trim();
+
+          // Check if any of the fields are empty
+          if (!patientName || !doctorName || !patientID || !nationality || !hospitalName || !fileType) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Please fill in all fields!',
+            });
+          } else {
+            // Show confirmation dialog
+            const swalWithBootstrapButtons = Swal.mixin({
+              customClass: {
+                confirmButton: "btn btn-success",
+                cancelButton: "btn btn-danger"
+              },
+              buttonsStyling: false
+            });
+            swalWithBootstrapButtons.fire({
+              title: "Are you sure?",
+              text: "You will not be able to undo this, so check the data entered before submitting!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonText: "Yes sure!",
+              cancelButtonText: "No, I'm not sure!",
+              reverseButtons: true
+            }).then((result) => {
+              if (result.isConfirmed) {
+                swalWithBootstrapButtons.fire({
+                  title: "Your request has been sent",
+                  text: "Your order number (1621) is in the Request status list. Note that requests in urgent cases take an hour. Therefore, if your request is very urgent, please contact the technical director in your hospital or call the SEHA  number around the clock 920002005.",
+                  icon: "success"
+                });
+              } else if (result.dismiss === Swal.DismissReason.cancel) {
+                swalWithBootstrapButtons.fire({
+                  title: "Request failed",
+                  text: "Please review the details and come back and submit it ",
+                  icon: "error"
+                });
+              }
+            });
+          }
+        });
+      });
+    </script>
+</head>
+
+<body>
+	<div class="wrapper d-flex align-items-stretch">
+		<nav id="sidebar">
+			<div class="p-4 pt-5">
+			  <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/img/default\ user.png);"></a>
+			  <h6 class="name">D. ALI AL SHAHRI</h3>
+			  <h5>Diriyah Hospital</h3>
+			  <ul class="list-unstyled components mb-5">
+				  <li>
+					  <a href="/html/home.html">Home</a>
+				  </li>
+				<li class="active">
+					<a href="/html/Request.html">Request</a>
+				</li>
+  
+				<!-- <li>
+				  <a href="/html/Reports.html">Reports</a>
+				</li> -->
+				<!-- <li>
+				  <a href="/html/statistics.html">statistics</a>
+				</li> -->
+				<li >
+				  <a href="/html/Visit.html">Visits</a>
+				</li>
+				<li>
+				  <a href="/html/Erorr-404.html" >Content Us</a>
+				</li>
+				<li>
+				  <a href="/html/login.html" style="color: red;" >logout</a>
+				</li>
+			  </ul>
+		
+  
+		  
+  
+  
+			  <div class="footer">
+				<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights To <span class="TAKATOF">TAKATOF</span></a>
+				  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			  </div>
+	
+			</div>
+		  </nav>
+	
+			<!-- Page Content  -->
+			<div id="content" class="p-4 p-md-5">
+  
+			  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+			  
+				  <button type="button" id="sidebarCollapse" class="btn btn-primary">
+					  <i class="fa fa-bars"></i>
+					  <span class="sr-only">Toggle Menu</span>
+				  </button>
+
+  
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				  <ul class="nav navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="/html/home.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/html/Request.html">Request</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/html/Request Status.html">Request Status</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/html/Erorr-404.html">Content Us</a>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</nav>
+
+			<script src="/js/jquery.min.js"></script>
+			<script src="/js/popper.js"></script>
+			<script src="/js/bootstrap.min.js"></script>
+			<script src="/js/main.js"></script>
+
+		<div class="wrapper" style="background-image: url('images/bg-registration-form-3.jpg');">
+				<div class="inner">
+					<form>
+						<h3>request file</h3>
+						<div class="form-group">
+							<div class="form-wrapper">
+								<label for="patientName">Patient Name:</label>
+								<div class="form-holder">
+									<i class="zmdi zmdi-account-o"></i>
+									<input type="text" class="form-control" name="patientName">
+								</div>
+							</div>
+							<div class="form-wrapper">
+								<label for="doctorName">Doctor name</label>
+								<div class="form-holder">
+									<i style="font-style: normal; font-size: 15px;">@</i>
+									<input type="text" class="form-control" name="doctorName">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-wrapper">
+								<label for="patientID">ID Patient:</label>
+								<div class="form-holder">
+									<i class="zmdi zmdi-account-o"></i>
+									<input type="text" class="form-control" name="patientID">
+								</div>
+							</div>
+							<div class="form-wrapper">
+								<label for="nationality">Nationality:</label>
+								<div class="form-holder select">
+									<select class="form-control" name="nationality">
+										<option value="viet nam">selector</option>
+										<option value="united states">saudi</option>
+										<option value="united kingdom">qatar</option>
+										<option value="viet nam">kuwait</option>
+										<option value="viet nam">germany</option>
+										<option value="viet nam">american</option>
+										<option value="viet nam">bahrain</option>
+									</select>
+									<i class="zmdi zmdi-pin"></i>
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="form-wrapper">
+								<label for="hospitalName">hospital name:</label>
+								<div class="form-holder select">
+									<select class="form-control" name="hospitalName">
+										<option value="viet nam">selector</option>
+										<option value="united states">Diriyah Hospital</option>
+										<option value="united kingdom">king Salman Hospital</option>
+										<option value="viet nam">Prince Sultan Military Medical City</option>
+										<option value="viet nam">King Faisal Specialist Hospital & Research Centre</option>
+										<option value="viet nam">King Khaled Eye Specialist Hospital</option>
+										<option value="viet nam">King Fahad Medical City (KFMC)</option>
+									</select>
+									<i class="zmdi zmdi-pin"></i>
+								</div>
+							</div>
+							<div class="form-wrapper">
+								<label for="fileType">file type:</label>
+								<div class="form-holder select">
+									<select class="form-control" name="fileType">
+										<option value="urgent">Urgent</option>
+										<option value="notUrgent">Not urgent</option>
+									</select>
+									<i class="zmdi zmdi-face"></i>
+								</div>
+							</div>
+						</div>
+						<div class="form-end">
+							<button type="button" class="button-holder">Send Request</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

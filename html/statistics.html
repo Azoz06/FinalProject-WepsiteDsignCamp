@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKATOF</title>
+    <!-- <link rel="stylesheet" href="test.css"> -->
+
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/css/fonts/icomoon/style.css "> -->
+    <!-- <link rel="stylesheet" href="/fonts/icomoon/icons.css"> -->
+  
+    <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+    <!-- Style CSS -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/css/statistics.css">
+    <!-- <link rel="stylesheet" href="/css/page.css"> -->
+    <link rel="stylesheet" href="/css//NAV.css">
+    <link rel="stylesheet" href="/css//table8.css">
+  
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- الرابط الخاص بكم -->
+
+<!-- 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script> -->
+
+    <!-- <script src="https://unpkg.com/feather-icons"></script> -->
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Quicksand:wght@300..700&family=Readex+Pro:wght@160..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    
+    
+  </head>
+  
+  
+  <body>
+  
+
+
+
+
+    
+    
+		
+      
+    
+    
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+			  <div class="p-4 pt-5">
+				<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(/img/default\ user.png);"></a>
+				<h6 class="name">D. ALI AL SHAHRI</h5>
+				<h5>Diriyah Hospital</h5>
+				<h4 style="color: bisque;">Pt.Muhammad Al Asiri</h3>
+				<ul class="list-unstyled components mb-5">
+				  <li>
+					  <a href="/html/home.html">Home</a>
+				  </li>
+          <li class="active">
+            <a href="/html/statistics.html">statistics</a>
+            </li>
+            
+				  <li >
+					  <a href="/html/Request.html">Request</a>
+				  </li>
+	
+				  <!-- <li>
+					<a href="/html/Reports.html">Reports</a>
+				  </li> -->
+				  <!-- <li>
+					<a href="/html/statistics.html">statistics</a>
+				  </li> -->
+				  <li>
+					<a href="/html/Visit.html">visit</a>
+				  </li>
+
+				  <li>
+					<a href="/html/Erorr-404.html" >Content Us</a>
+				  </li>
+
+				  <li>
+            <a href="/html/login.html" style="color: red;" >logout</a>
+          </li>
+				</ul>
+		  
+	
+			
+	
+	
+				<div class="footer">
+				  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights To <span class="TAKATOF">TAKATOF</span></a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+				</div>
+	  
+			  </div>
+			</nav>
+	  
+			  <!-- Page Content  -->
+			  <div id="content" class="p-4 p-md-5">
+	
+				<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				  <div class="container-fluid">
+				
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+						<i class="fa fa-bars"></i>
+						<span class="sr-only">Toggle Menu</span>
+					</button>
+
+	
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="nav navbar-nav ml-auto">
+					  <li class="nav-item active">
+						  <a class="nav-link" href="/html/home.html">Home</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="/html/Request.html">Request</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="/html/Request Status.html">Request Status</a>
+					  </li>
+					  <li class="nav-item">
+						  <a class="nav-link" href="/html/Erorr-404.html">contact Us</a>
+					  </li>
+					</ul>
+				  </div>
+				</div>   
+			  </nav>
+	  
+			  <!-- <h2 class="mb-4">Sidebar #01</h2>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+	
+		  <script src="/js/jquery.min.js"></script>
+		  <script src="/js/popper.js"></script>
+		  <script src="/js/bootstrap.min.js"></script>
+		  <script src="/js/main.js"></script>
+
+    
+
+
+
+ 
+      <div style="width: 300px">
+        <!-- عنصر canvas للرسم البياني الأول -->
+        <canvas id="myChart1"></canvas>
+      </div>
+      <div style="width: 400px">
+        <!-- عنصر canvas للرسم البياني الثاني -->
+        <canvas id="myChart2"></canvas>
+      </div>
+      <div style="width: 300px">
+        <!-- عنصر canvas للرسم البياني الثالث -->
+        <canvas id="myChart3"></canvas>
+     </div>
+      <div style="width: 500px">
+        <!-- عنصر canvas للرسم البياني الثالث -->
+        <canvas id="myChart4"></canvas>
+     </div>
+    
+
+
+ 
+    <script>
+      // الرسم البياني الأول
+      var data1 = {
+          labels: ["Blood Pressure"],
+          labels: ["Blood Pressure"],
+          datasets: [{
+            label: ' blood pressure reading',
+              data: [120, 38], // Percentages you want to represent (62% with color, 38% without color)
+              backgroundColor: [
+                  // This color will be applied to the first half of the chart
+                  'rgba(255, 0, 0, 0.5)',
+                  // This color will be applied to the second half of the chart (no color)
+                  // 'rgba(255, 0, 255, 0.5)', 
+                  '#FFE8C5', 
+              ],
+          }]
+      };
+  
+      var config1 = {
+          type: 'doughnut',
+          data: data1,
+          options: {
+              responsive: true,
+              plugins: {
+                  title: {
+                      display: true,
+                      text: 'Blood Pressure Ratio / mmHg'
+                  },
+                  legend: {
+                      display: false
+                  }
+              },
+              cutoutPercentage: 50, // This determines the percentage of the chart that is cut out
+              layout: {
+                  padding: {
+                      left: 25,
+                      right: 25,
+                      top: 25,
+                      bottom: 25
+                  }
+              }
+          },
+      };
+  
+      var myChart1 = new Chart(
+          document.getElementById('myChart1'),
+          config1
+      );
+  
+      // الرسم البياني الثاني
+      var data2 = {
+          labels: ['Week-1', 'Week-2', 'Week-3', 'Week-4', 'Week-5', 'Week-6'],
+          datasets: [{
+              label: 'The number of heartbeats per minute',
+              data: [80, 79, 95, 60, 75, 100],
+              borderWidth: 2
+          }]
+      };
+  
+      var config2 = {
+          type: 'line',
+          data: data2,
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      };
+  
+      var myChart2 = new Chart(
+          document.getElementById('myChart2'),
+          config2
+      );
+  
+      // الرسم البياني الثالث
+      var data3 = {
+          labels: ['Day-1', 'Day-2', 'Day-3', 'Day-4', 'Day-5', 'Day-6', 'Day-7'],
+          datasets: [{
+              label: 'Oxygen ratio',
+              data: [91, 85, 80, 81, 97, 99, 100],
+              fill: false,
+              borderColor: 'rgb(75, 192, 192)',
+              tension: 0.1
+          }]
+      };
+  
+      var config3 = {
+          type: 'radar',
+          data: data3,
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      };
+  
+      var myChart3 = new Chart(
+          document.getElementById('myChart3'),
+          config3
+      );
+
+      // الرسم البياني االرابع
+
+      const xValues = ['January','February','March','April','May','June','July','August','September','October'];
+
+new Chart("myChart4", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      label: 'Iron (g/dL)',
+      data: [14,14.1,14.5,13,15,15.3,17.3,18.5,19,20],
+      borderColor: "red",
+      fill: false
+    }, { 
+      label: 'Calcium (mg/dL)',
+      data: [8,7.4,8.1,9,10.3,12,14,11,8,8.2],
+      borderColor: "green",
+      fill: false
+    }, { 
+      label: 'Sodium (mmol/L)',
+      data: [135,120,121,116,137,142.3,145,147.8,145.5,145],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+  </script>
+
+<!--     
+       <table class="notes">
+        <tr class="not2">
+          <th id="not1">Doctor notes</th>
+          <th id="not2">Doctor Name</th>
+        </tr>
+
+        <tr>
+          <td>ABDULAZIZ AL AHMARI</td>
+          <td id="not3">None</td>
+        </tr>
+
+        <tr>
+          <td>ABDULLAH AL MUTAIRI</td>
+          <td id="not4">High Pressure</td>
+        </tr>
+
+        <tr>
+          <td>OSAMA AL KHALIDI</td>
+          <td id="not3">None</td>
+        </tr>
+
+        <tr>
+          <td>SAAD AL ASIRI</td>
+          <td id="not3">None</td>
+        </tr>
+
+        
+       </table>
+ -->
+ 
+ <section class="ftco-section" id="testing">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-4">
+        <h2 class="heading-section">Patient Reports</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h5 class="h5 mb-4 text-center">
+          Here are all the reports written by health practitioners, an explanation of the patient's conditi on,
+           and the type of review according to the meaning of the following colors <br>
+           <span style="color: #4fc0d2;">Lateness</span> , <span style="color: #52d29a;">Present</span> , <span style="color: #e7c468b3;"> Postponed</span> , <span style="color: #eb7655;">Did not attend</span>
+        </h5>
+          
+        <div class="table-wrap">
+          <table class="table myaccordion table-hover" id="accordion">
+            <thead>
+              <tr>
+                <!-- <th>#</th> -->
+                <th>Doctor Name</th>
+                <th>Hospital</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>File No</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="Doc1">
+                
+                <td class="td1">ABDULAZIZ AL AHMARI</td>
+                <td class="td1">Diriyah Hospital</td>
+                <td class="td1">12-3-2024</td>
+                <td class="td1">10:19</td>
+                <td class="td1">249137</td>
+                <td>
+                  <i class="fa" aria-hidden="false"></i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6" id="collapseOne" class="collapse show acc" data-parent="#accordion">
+                  <p>Referred from the heart clinic
+                    To ensure that the patient's body is able to tolerate the operation and that the analysis data matches the anesthesia during the operation.</p>
+                </td>
+              </tr>
+
+              <tr data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" class="collapsed" id="Doc2">
+                <!-- <th scope="row">2</th> -->
+                <td>ABDULLAH AL MUTAIRI</td>
+                <td>KSFHRC</td>
+                <td>30-3-2024</td>
+                <td>18:03</td>
+                <td>583206</td>
+                <td>
+                  <i class="fa" aria-hidden="false"></i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6" id="collapseTwo" class="collapse acc" data-parent="#accordion">
+                  <p>
+                    peration accomplished successfully. These are the most important tests after the operation
+                (SBP=85) , (DBP = 50) , (Na = 125 mmol/L) = -Na 10 mmol/L
+                  </p>
+                </td>
+              </tr>
+
+              <tr data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed" id="Doc3">
+                <!-- <th scope="row">3</th> -->
+                <td>OSAMA AL KHALIDI</td>
+                <td>Asir Central Hospital</td>
+                <td>20-4-2024</td>
+                <td>11:38</td>
+                <td>704895</td>
+                <td>
+                  <i class="fa" aria-hidden="false"></i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6" id="collapseThree" class="collapse acc" data-parent="#accordion">
+                  <p>A routine review was scheduled after the operation, but the appointment was postponed at the patient request.</p>
+                </td>
+              </tr>
+
+              <tr data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed" id="Doc4">
+                <!-- <th scope="row">4</th> -->
+                <td>SAAD AL ASIRI</td>
+                <td>King Salman Hospital</td>
+                <td>19-6-2024</td>
+                <td>13:53</td>
+                <td>173086</td>
+                <td>
+                  <i class="fa" aria-hidden="false"></i>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="6" id="collapseFour" class="collapse acc" data-parent="#accordion">
+                  <p> A routine review was scheduled, but the patient did not show up for the appointment.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

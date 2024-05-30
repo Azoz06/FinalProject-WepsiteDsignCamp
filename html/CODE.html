@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKATOF</title>
+
+    <link rel="stylesheet" href="/css/code.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/Code Eroor.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poetsen+One&family=Quicksand:wght@300..700&family=Readex+Pro:wght@160..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="OTP">
+    <form class="otp-Form">
+        
+        <span class="mainHeading">Enter OTP</span>
+        <p class="otpSubheading">Enter the code sent to the email address registered with <span class="SEHA">SEHA</span> systems</p>
+        <div class="inputContainer">
+            <input maxlength="1" type="text" class="otp-input" id="otp-input1" autocomplete="off">
+            <input maxlength="1" type="text" class="otp-input" id="otp-input2" autocomplete="off">
+            <input maxlength="1" type="text" class="otp-input" id="otp-input3" autocomplete="off">
+            <input maxlength="1" type="text" class="otp-input" id="otp-input4" autocomplete="off">
+        </div>
+
+        <div class="end">
+            <button class="verifyButton" type="submit" id="verifyBtn"><span class="spanend">Verify</span></button>
+            <p class="resendNote">Didn't receive the code? <a href="#" class="resendBtn" id="resendBtn">Resend Code</a></p>
+            <span id="countdown" style="display: none;"></span>
+        </div>
+    </form>
+</div>
+
+
+</body>
+
+</html>

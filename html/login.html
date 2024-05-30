@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAKATOF-Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="/js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+    <link rel="shortcut icon" href="/img/تكاتف الصغير.png" type="image/x-icon" />
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Readex+Pro:wght@160..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+    <!-- TAKATO FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Kufi+Arabic:wght@100..900&family=Noto+Sans+Arabic:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Readex+Pro:wght@160..700&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+
+
+    
+    <div class="form-container">
+        <a href="/html/login.html">
+            <img src="/img/تكاتف-اخضر.svg" alt="TAKATIOF logo" style="transform: translateX(85px);" title="TAKATIOF LOGO">
+        </a>
+        
+        <h1 class="title"title="TAKATIOF PLATFORM">Welcome To</h1>
+        <p class="title-p" title="TAKATIOF PLATFORM">TAKATIOF</p>
+        <form id="loginForm" class="form" onsubmit="return checkForm();">
+            <input type="email" id="email" class="input" placeholder="Email"  title="EMAIL">
+            <input type="password" id="password" class="input" placeholder="Password"  title="PASSWORD">
+            <button type="submit" class="form-btn" title="To enter the platform">Log in</button>
+        </form>
+
+        <p class="sign-up-label">or</p>
+
+        <div ng-if="CurrentLang == 'ar' && HasReCWidget && IsNIC && SysEnvironment == 'live'" class="iam-a" style=" margin-right: auto;">
+            <a class="iam-s" title="NATIONAL INFORMATION CENTER PLATFORM" href="/iam/html/iam-E.html">
+                <span class="icon icon-sign-in"></span>
+                <img ng-src="/Content/Images/MOH/NIC-logo.png" width="150 px" src="/img/NIC-logo.png">
+                SIGN IN THROUGH NATIONAL INFORMATION CENTER PLATFORM
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        <h4 id="f-h4" title="TAKATOF Approval"><span>TAKATIOF</span> platform approved by the <a href="https://www.moh.gov.sa/Pages/Default.aspx" title="MINISTRY OF HEALTH WEBSITE">MINISTRY OF HEALTH</a></h4>
+    </div>
+
+
+</body>
+</html>

